@@ -4,6 +4,7 @@
 #include <string.h>
 #include "readLine.h"
 #include "execCmds.h"
+#include "reverse.h"
 
 // print the elements in the array, up to (but not including) the first
 // NULL entry
@@ -14,9 +15,14 @@ void printLines(char** a) {
   }
 }
 
+//reverse the lines in the array
+void reverseArray(char** arr);
+
+
 // our array that tells how command-strings map to functions
 commandMap map[] = {
   {"-p", printLines},
+  {"-r",reverseArray},
   {NULL, NULL},
 };
 

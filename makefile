@@ -1,5 +1,5 @@
-prog: main.o readLine.o execCmds.o reverse.o
-	gcc -o prog main.o readLine.o execCmds.o reverse.o
+prog: main.o readLine.o execCmds.o person5.o reverse.o
+	gcc -o prog main.o readLine.o execCmds.o person5.o reverse.o
 
 main.o: main.c readLine.h execCmds.h reverse.h
 	gcc -c main.c
@@ -12,6 +12,9 @@ execCmds.o: execCmds.c execCmds.h
 
 reverse.o: reverse.c reverse.h
 	gcc -c reverse.c
+
+person5.o: person5.c person5.h
+	gcc -c person5.c
 
 clean:
 	rm -f *.o prog

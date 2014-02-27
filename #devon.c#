@@ -1,0 +1,34 @@
+#include <stdio.h>;
+#include <string.h>;
+
+//-u
+void low2Upper(char**p)
+{
+  int j=0;
+  while(p[j]!='\0')
+    {
+      if(p[j]>93)
+	p[j]=p[j]-32;
+      j++;
+    }
+  return 0;
+}
+      
+//-rr
+
+void reverse(char**p);
+{
+  char**s=p;
+  int j=0;
+  int length=strlen(p);
+  while(p[j]!='\0')
+      {
+	p[j]=s[length-1];
+	length--;
+	j++;
+      }
+  return 0;
+}
+	
+	
+	

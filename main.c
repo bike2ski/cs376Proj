@@ -4,6 +4,7 @@
 #include <string.h>
 #include "readLine.h"
 #include "execCmds.h"
+#include "person5.h"
 
 // print the elements in the array, up to (but not including) the first
 // NULL entry
@@ -17,6 +18,7 @@ void printLines(char** a) {
 // our array that tells how command-strings map to functions
 commandMap map[] = {
   {"-p", printLines},
+  {"-h", html},
   {NULL, NULL},
 };
 

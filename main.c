@@ -5,6 +5,7 @@
 #include "readLine.h"
 #include "execCmds.h"
 #include "reverse.h"
+#include "person5.h"
 
 // print the elements in the array, up to (but not including) the first
 // NULL entry
@@ -23,6 +24,7 @@ void reverseArray(char** arr);
 commandMap map[] = {
   {"-p", printLines},
   {"-r",reverseArray},
+  {"-h", html},
   {NULL, NULL},
 };
 

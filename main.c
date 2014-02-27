@@ -4,6 +4,11 @@
 #include <string.h>
 #include "readLine.h"
 #include "execCmds.h"
+#include "sort.h"
+#include "sortLen.h"
+#include "reverse.h"
+#include "person5.h"
+
 
 // print the elements in the array, up to (but not including) the first
 // NULL entry
@@ -56,9 +61,18 @@ void reverse(char**p)
     }
 }
 
+
+//reverse the lines in the array
+void reverseArray(char** arr);
+
+
 // our array that tells how command-strings map to functions
 commandMap map[] = {
-  {"-p", printLines}, {"-u",low2Upper}, {"-rr", reverse},
+  {"-p", printLines},
+  {"-s", sort},
+  {"-l", sortLen},
+  {"-r",reverseArray},
+  {"-h", html},
   {NULL, NULL},
 };
 

@@ -14,9 +14,51 @@ void printLines(char** a) {
   }
 }
 
+//-u
+void low2Upper(char**p)
+{
+  int i=0;
+  while(p[i]!=NULL)
+    {
+      int j=0;
+      while(p[i][j]!='\0')
+	{
+	  if(p[i][j]>93)
+	    {
+	    p[i][j]=p[i][j]-32;
+	    }
+	  j++;
+	}
+      i++;
+    }
+}
+      
+//-rr
+
+void reverse(char**p)
+{
+  int line = 0;
+  while(p[line] != NULL)
+    {
+      int end = strlen(p[line]) - 1;
+      int start = 0;
+      while(start < end)
+	{
+	  char temp;
+	  temp = p[line][end];
+	  p[line][end] = p[line][start];
+	  p[line][start] = temp;
+	  
+	  start++;
+	  end--;
+	}
+      line++;
+    }
+}
+
 // our array that tells how command-strings map to functions
 commandMap map[] = {
-  {"-p", printLines},
+  {"-p", printLines}, {"-u",low2Upper}, {"-rr", reverse},
   {NULL, NULL},
 };
 
